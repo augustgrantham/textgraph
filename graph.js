@@ -5,11 +5,17 @@ function graph() {
     let print = "<table>";
     let empty = " ";
     for(let y = 20; y >= 0; y--) {
-        console.log(y);
         print += "<tr>";
-        for(let x = 0; x <= 20; x++)
+        for(let x = -10; x <= 10; x++)
         {
-            print += "<td>(" + x + "," + y + ")</td>";
+            let func = (x**2);
+            if(y == func) {
+                print += "<td id=\"point\"></td>";
+            }
+            else {
+                print += "<td>(" + x + "," + y + ")</td>";
+            }
+            
         }
         print += "</td>";
     }

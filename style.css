@@ -15,10 +15,13 @@ tr, th, td {
 td {
     width: 10px;
     height: 10px;
-    font-size: 10px;
+    font-size: 12px;
     justify-content: center;
     align-content: center;
     text-align: center;
+}
+point {
+    background-color: black;
 }
 button {
     border: 1px solid black;
