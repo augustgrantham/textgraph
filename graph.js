@@ -1,8 +1,11 @@
+// html objects
 const button = document.getElementById("graphBtn");
 const check = document.getElementById("test");
 const graphsheet = document.getElementById("graphsheet");
+//javascript variables
+let print;
 function graph() {
-    let print = "<table>";
+    print = "<table>";
     let empty = " ";
     for(let y = 20; y >= 0; y--) {
         print += "<tr>";
@@ -19,6 +22,10 @@ function graph() {
         }
         print += "</td>";
     }
+    updateGraph();
+}
+
+function updateGraph() {
     check.innerHTML = "button fucking clicked";
     graphsheet.innerHTML = print;
     
