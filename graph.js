@@ -7,16 +7,16 @@ let print;
 function graph() {
     print = "<table>";
     let empty = " ";
-    for(let y = 20; y >= 0; y--) {
+    for(let y = 50; y >= 0; y--) {
         print += "<tr>";
-        for(let x = -10; x <= 10; x++)
+        for(let x = -30; x <= 30; x++)
         {
             let func = (x**2);
             if(y == func) {
                 print += "<td id=\"point\"></td>";
             }
             else {
-                print += "<td>(" + x + "," + y + ")</td>";
+                print += "<td> </td>";
             }
             
         }
@@ -28,7 +28,7 @@ function graph() {
 function updateGraph() {
     check.innerHTML = "button fucking clicked";
     graphsheet.innerHTML = print;
-    graphsheet.scrollLeft = 250;
+    graphsheet.scrollLeft = 250;git 
     graphsheet.scrollTop = 100;
     
 

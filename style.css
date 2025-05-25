@@ -9,20 +9,24 @@ tr, th, td {
 }
 #graphsheet {
     display: flex;
-    width: 500px;
+    width: 600px;
     height: 500px;
     overflow-x: scroll;
 }
 td {
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
     justify-content: center;
     align-content: center;
     text-align: center;
+    flex-shrink: 0;
 }
 #point {
     background-color: black;
+}
+#axis {
+    background-color: rgb(183, 183, 183);
 }
 button {
     border: 1px solid black;
