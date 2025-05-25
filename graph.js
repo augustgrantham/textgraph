@@ -28,6 +28,8 @@ function graph() {
 function updateGraph() {
     check.innerHTML = "button fucking clicked";
     graphsheet.innerHTML = print;
+    graphsheet.scrollLeft = 250;
+    graphsheet.scrollTop = 100;
     
 
 }
