@@ -22,7 +22,7 @@ function graph() {
                 print += "<td id=\"axis\"></td>";
             }
             else {
-                print += "<td> </td>";
+                print += "<td></td>";
             }
             
         }
@@ -35,7 +35,7 @@ function updateGraph() {
     check.innerHTML = "Graph created!";
     graphsheet.innerHTML = print;
     graphsheet.scrollLeft = 250;
-    graphsheet.scrollTop = 450;
+    graphsheet.scrollTop = 300;
     
 
 }
