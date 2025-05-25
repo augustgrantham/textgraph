@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Hello! I have moved this over to my VM now!</p>
-    <button id="graphBtn", onclick="graph()">Eventually this button will do super cool stuff</button>
-    <p id="test"></p>
+    <div id="info">
+        <header>textGraph</header>
+        <p>Welcome to my text based graphing calculator! This is my first personal coding project so thank you for checking it out! Press the graph button below to create a 2d text based graph of a quadratic function.</p>
+        <button id="graphBtn", onclick="graph()">Graph</button>
+    </div>
+ 
     <div class="graphwindow">
+        
          <p id="graphsheet">
             <table>
                 
             </table>
          </p>
+        <p id="test"></p> 
     </div>
+    
    
     <script type="text/javascript" src="graph.js"></script>
 </body>
