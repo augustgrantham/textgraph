@@ -9,7 +9,16 @@
 <body>
     <div id="info">
         <header>textGraph</header>
-        <p>Welcome to my text based graphing calculator! This is my first personal coding project so thank you for checking it out! Press the graph button below to create a 2d text based graph of a quadratic function.</p>
+        <p>Welcome to my text based graphing calculator! This is my first personal coding project so thank you for checking it out! Press the graph button below to create a 2d text based graph of various types of functions.</p>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" id="dropbtn">Linear</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button onclick="linear()" class="functionbtn">Linear</button>
+                <button onclick="quadratic()" class="functionbtn">Quadratic</button>
+                <button onclick="exponential()" class="functionbtn">Exponential</button>
+                <button onclick="absolute()" class="functionbtn">Absolute</button>
+            </div>
+        </div>
         <button id="graphBtn", onclick="graph()">Graph</button>
     </div>
  
@@ -22,8 +31,6 @@
          </p>
         <p id="test"></p> 
     </div>
-    
-   
     <script type="text/javascript" src="graph.js"></script>
 </body>
 </html>
