@@ -1,5 +1,5 @@
 # textgraph
-A text based graphing calculator.[See it live here.](https://augustgrantham.github.io/textgraph/)
+A text based graphing calculator. [See it live here.](https://augustgrantham.github.io/textgraph/)
 
 
 ## Key Features
