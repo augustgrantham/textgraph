@@ -5,6 +5,8 @@ A text based graphing calculator. [See it live here.](https://augustgrantham.git
 ## Key Features
 
 - Graph different functions in a text based format
+- User input allowing manipulation of graphs
+- Live graph updates
 - Choose from a variety of color layouts
 
 ## Implementation
@@ -25,6 +27,9 @@ Early on the project suffered from unneccesarily bundled code. By seperating the
 - **Know Your Syntax** I spent hours at the beginning of this project failing to understand why my quadratic function would not graph correctly. The issue turned out to be my use of the "^" operator when trying to raise x to the second power. This is NOT a power operator in Javascript, but a binary expression operator for XOR. Once I replaced the carrot top symbol with the correct operator "**" it worked perfectly.
 - **Dynamic User Design** Adding user input was a neccessity to turn the project from a pattern printer into a interactive web application, but developing it was not as straight forward as I assumed. I wanted a fluid and intuitive user interface, similiar to desmos or Khan Academy. This required switching the formula input, handling null responses when a paragraph tag wasn't currently in the DOM, and reworking the calculator to automatically update whenever a paremeter is tweaked. The result was much more responsive software, and a better appreciation, and interest in UX/UI design.
 
+## Future Plans
+
+- **Increases precision** The current graphing system works great for integer values, but is unable to make the fluid graph shapes of traditional graphing calculators. In the future I plan to larger 2x2 squares for intengers, giving room for in between data points to smooth the graphs while retaining the text based aesthetic.
 ## Getting Started
 To run this web application locally you can either 
 
