@@ -9,8 +9,11 @@ body {
     font-size: 10px;
     background-color: rgb(206, 214, 203);
     text-align: center;
-    position:relative;
+    position: relative;
     z-index: 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #info {
     justify-content: center;
@@ -32,8 +35,8 @@ tr, th, td {
 }
 #graphsheet {
     display:flex;
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    height: 100vw;
     margin:auto;
     overflow-x: scroll;
     outline:2px solid black;
@@ -138,5 +141,4 @@ button#purpleBtn:hover {
 button#evilBtn:hover {
     background-color: rgba(182, 116, 119, 0.671);
 }
-
 
