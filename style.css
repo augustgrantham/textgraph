@@ -142,3 +142,16 @@ button#evilBtn:hover {
     background-color: rgba(182, 116, 119, 0.671);
 }
 
+@media  (min-width: 700px) {
+   #graphsheet {
+    display:flex;
+    width: 600px;
+    height: 500px;
+    margin:auto;
+    overflow-x: scroll;
+    outline:2px solid black;
+    text-align: center;
+    scrollbar-color: var(--secondary) var(--scroll);
+    opacity: 99%;
+}
+}
