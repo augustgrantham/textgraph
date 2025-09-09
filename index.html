@@ -14,15 +14,15 @@
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn" id="dropbtn">Linear</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#" onclick="linear()">Linear</a>
-                <a href="#" onclick="quadratic()">Quadratic</a>
-                <a href="#" onclick="exponential()">Exponential</a>
-                <a href="#" onclick="absolute()">Absolute</a>
+                <a href="#" onclick="linear(), graph()">Linear</a>
+                <a href="#" onclick="quadratic(), graph()">Quadratic</a>
+                <a href="#" onclick="exponential(), graph()">Exponential</a>
+                <a href="#" onclick="absolute(), graph()">Absolute</a>
             </div>
         </div>
         <button id="graphBtn" onclick="graph()">Graph</button>
-    </div>
- 
+        </div>
+    
     <div class="graphwindow">
         
          <p id="graphsheet">
@@ -30,6 +30,8 @@
                 
             </table>
          </p>
+         <h3>Formula</h3>
+         <p id="formulaSheet">f(x) = <input type="number", id="aValue", name="aInput", required minlength="1", maxlength="1", placeholder="1"/>x + <input type="number", id="cValue", name="cInput", required minlength="1", maxlength="1", placeholder="0"/></p>
         <p id="test"></p> 
         <button id="greenBtn" onclick="green()">Green</button>
         <button id="blueBtn" onclick="blue()">Blue</button>

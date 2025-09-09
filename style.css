@@ -21,8 +21,17 @@ body {
     text-align: center;
     padding:5%;
 }
+#inputbox
+{
+    padding:15px;
+    margin-top: 20px;
+    margin-bottom: 10px;  
+}
 header {
-    font-size: 25px;
+    font-size: 30px;
+}
+input {
+    width: 3vw;
 }
 tr, th, td {
     border: 1px solid black;
@@ -143,6 +152,9 @@ button#evilBtn:hover {
 }
 
 @media  (min-width: 700px) {
+    body{
+        font-size: 15px;
+    }
    #graphsheet {
     display:flex;
     width: 600px;

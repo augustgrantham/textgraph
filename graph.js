@@ -3,7 +3,9 @@ const button = document.getElementById("graphBtn");
 const check = document.getElementById("test");
 const graphsheet = document.getElementById("graphsheet");
 const funct = document.getElementById("dropbtn");
+const functionSheet = document.getElementById("formulaSheet");
 evilIcon = document.getElementById("evil");
+
 //css elements
 let theme = document.querySelector(":root");
 
@@ -14,7 +16,38 @@ let type = "linear";
 let a = 1;
 let c = 0;
 let func;
+//event listener
+functionSheet.addEventListener("change", graph);
+//main graphing function
 function graph() {
+    let aInput = document.getElementById("aValue") ? document.getElementById("aValue").valueAsNumber : null;
+    let bInput = document.getElementById("bValue") ? document.getElementById("bValue").valueAsNumber : null;
+    let cInput = document.getElementById("cValue") ? document.getElementById("cValue").valueAsNumber : null;
+    //Check if the input is a valid number
+    if (isNaN(aInput)) {
+      if(type == "exponential") {
+        aInput = 3;
+      }
+      else
+        {
+        aInput = 1;
+      }
+        
+    }
+    if (isNaN(bInput)) {
+      if(type == "absolute") {
+        bInput = 0;
+      }
+      else
+      {
+         bInput = 2;
+      }
+             
+    }
+    if (isNaN(cInput)) {
+        cInput = 0;
+    }
+
     print = "<table>";
     let empty = " ";
     for(let y = 50; y >= -50; y--) {
@@ -24,19 +57,19 @@ function graph() {
           switch(type)
           {
             case "linear":
-              func = x;
+              func = (aInput * x) + cInput;
               break;
             case "quadratic":
-              func = (x**2);
+              func = ((aInput * x)**2 + cInput);
               break;
             case "exponential":
-              func = (2**x);
+              func = ((aInput **x) + cInput);
               break;
             case "absolute":
-              func = (Math.abs(x));
+              func = ((Math.abs((aInput * x) - bInput)) + cInput);
               break;
           }
-            if(y == func) {
+            if(Math.abs(func - y) < 0.5) {
                 print += "<td id=\"point\"></td>";
             }
             else if(x == 0){
@@ -59,19 +92,23 @@ function linear()
 {
   type = "linear";
   funct.innerHTML = "Linear";
+  functionSheet.innerHTML = 'f(x) = <input type="number", id="aValue", name="aInput", required minlength="1", maxlength="1", value="1"/>x + <input type="number", id="cValue", name="cInput", required minlength="1", maxlength="1", value="0"/>';
 }
 function quadratic()
 {
   type = "quadratic";
   funct.innerHTML = "Quadratic";
+  functionSheet.innerHTML = 'f(x) = <input type="number", id="aValue", name="aInput", required minlength="1", maxlength="1", placeholder="1"/> x^2 + <input type="number", id="cValue", name="cInput", required minlength="1", maxlength="1", placeholder="0"/>';
 }
 function exponential() {
   type = "exponential";
   funct.innerHTML = "Exponential";
+  functionSheet.innerHTML = 'f(x) = <input type="number", id="aValue", name="aInput", required minlength="1", maxlength="1", placeholder="3"/> ^x + <input type="number", id="cValue", name="cInput", required minlength="1", maxlength="1", placeholder="0"/>';
 }
 function absolute() {
   type = "absolute";
   funct.innerHTML = "Absolute";
+  functionSheet.innerHTML = 'f(x) = |<input type="number", id="aValue", name="aInput", required minlength="1", maxlength="1", placeholder="1"/>x - <input type="number", id="bValue", name="bInput", required minlength="1", maxlength="1", placeholder="0"/>| + <input type="number", id="cValue", name="cInput", required minlength="1", maxlength="1", placeholder="0"/>';
 }
 function updateGraph() {
     

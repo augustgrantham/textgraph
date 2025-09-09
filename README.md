@@ -13,7 +13,7 @@ A text based graphing calculator. [See it live here.](https://augustgrantham.git
 - **Javascript** User input, calculations and output
 - **HTML & CSS** Front end, styling
 
-Written almost completely in Javascript, textGraph creates a grid of cells and uses conditional logic to determine if it's a point on the function, a point on the axis, or just a blank space. Using switch statements it can switch between numerious different function types.
+Written almost completely in Javascript, textGraph creates a grid of cells and uses conditional logic to determine if it's a point on the function, a point on the axis, or just a blank space. Using switch statements it can switch between numerious different function types. Prints formatted string to window and centers viewport in middle of graph.
 
 ## Optimizations
 
@@ -22,7 +22,9 @@ Early on the project suffered from unneccesarily bundled code. By seperating the
 
 ## Lessons Learned:
 
-**Know Your Syntax** I spent hours at the beginning of this project failing to understand why my quadratic function would not graph correctly. The issue turned out to be my use of the "^" operator when trying to raise x to the second power. This is NOT a power operator in Javascript, but a binary expression operator for XOR. Once I replaced the carrot top symbol with the correct operator "**" it worked perfectly.
+- **Know Your Syntax** I spent hours at the beginning of this project failing to understand why my quadratic function would not graph correctly. The issue turned out to be my use of the "^" operator when trying to raise x to the second power. This is NOT a power operator in Javascript, but a binary expression operator for XOR. Once I replaced the carrot top symbol with the correct operator "**" it worked perfectly.
+- **Dynamic User Design** Adding user input was a neccessity to turn the project from a pattern printer into a interactive web application, but developing it was not as straight forward as I assumed. I wanted a fluid and intuitive user interface, similiar to desmos or Khan Academy. This required switching the formula input, handling null responses when a paragraph tag wasn't currently in the DOM, and reworking the calculator to automatically update whenever a paremeter is tweaked. The result was much more responsive software, and a better appreciation, and interest in UX/UI design.
+
 ## Getting Started
 To run this web application locally you can either 
 
